@@ -1,0 +1,68 @@
+ul.tripay {
+  list-style-type: none;
+  margin-bottom: 21px;
+  margin-left: 0px;
+}
+ul.tripay h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 6px;
+}
+ul.tripay li {
+  display: inline-block;
+  margin: 0px;
+}
+
+ul.tripay li input[type="radio"][id^="tripaycheck"] {
+  display: none;
+}
+
+#edd_checkout_form_wrap ul.tripay li label {
+  border: 2px solid #f1f1f1;
+  padding: 10px;
+  display: block!important;
+  position: relative!important;
+  margin: 10px 5px!important;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+ul.tripay li label:before {
+  color: #84d12c;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -10px;
+  text-align: center;
+  transition-duration: 0.4s;
+  transform: scale(0);
+  font-size: 22px;
+}
+
+ul.tripay li label img {
+  height: auto;
+  width: auto;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+ul.tripay li input[type="radio"]:checked + label {
+  border-color: #ddd;
+  background: #f1f1f1;
+}
+
+ul.tripay li input[type="radio"]:checked + label:before {
+  content: "";
+  transform: scale(1);
+  background: #84d12c;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+}
+
+ul.tripay li input[type="radio"]:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
